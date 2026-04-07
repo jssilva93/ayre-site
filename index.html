@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayre - Mindful Habit Companion</title>
+    <meta name="description" content="Ayre helps you build healthier habits with smart schedules, a wellness companion on your wrist, and guided breathing exercises.">
+    <meta property="og:title" content="Ayre - Mindful Habit Companion">
+    <meta property="og:description" content="Smart schedules, Watch haptics, and a companion that cares.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lavender: #b8a3de;
+            --soft-purple: #8c73bf;
+            --deep-purple: #1a1024;
+            --bg: #f7f4fa;
+            --card: #ffffff;
+            --text: #33264d;
+            --text-secondary: #806b94;
+            --allowed: #8cc7a6;
+            --blocked: #d98c8c;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #14101e;
+                --card: #241e33;
+                --text: #ebe6f5;
+                --text-secondary: #a699b8;
+            }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 0 60px;
+        }
+
+        .hero-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, #e6e0f3, #f0ecf7);
+            margin: 0 auto 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .hero-icon {
+                background: linear-gradient(135deg, #2a2240, #362d4d);
+            }
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--lavender), var(--soft-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        /* Badge */
+        .badge-row {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        .badge-row a img {
+            height: 44px;
+        }
+
+        /* Features */
+        .features {
+            padding: 40px 0 60px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        @media (max-width: 520px) {
+            .feature-grid { grid-template-columns: 1fr; }
+        }
+
+        .feature-card {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .feature-card .icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .feature-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .feature-card p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--lavender);
+            opacity: 0.9;
+        }
+
+        footer nav {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        footer a:hover {
+            color: var(--lavender);
+        }
+
+        footer .copy {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-icon" aria-hidden="true">
+                <img src="icon.png" alt="Ayre icon" width="80" height="80" style="border-radius: 16px;" onerror="this.style.display='none'; this.parentElement.textContent='🌬️';">
+            </div>
+            <h1><span>Ayre</span></h1>
+            <p>A mindful companion for your habits. Smart schedules on your wrist, guided breathing when you need it, and a pet that truly cares.</p>
+
+            <div class="badge-row">
+                <!-- Replace # with your App Store link once live -->
+                <a href="#" aria-label="Download on the App Store">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                </a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">📅</div>
+                    <h3>Smart Schedules</h3>
+                    <p>Intervals, hourly windows, or custom blocks. Your rules, your pace.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⌚</div>
+                    <h3>Watch Companion</h3>
+                    <p>Haptic nudges and a live complication right on your wrist.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🌬️</div>
+                    <h3>Guided Breathing</h3>
+                    <p>4-4-6 breathing exercise with haptic feedback when you're struggling.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🐾</div>
+                    <h3>Your Pet</h3>
+                    <p>A companion that reflects your state and celebrates every win with you.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <nav>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="support.html">Support</a>
+            </nav>
+            <p class="copy">&copy; 2026 Arkanum Soft. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
